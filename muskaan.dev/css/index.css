@@ -195,3 +195,4 @@
     .hero { flex-direction: column-reverse; text-align: center; }
     .featured-grid { grid-template-columns: 1fr; }
 }
+
