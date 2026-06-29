@@ -4,19 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Muskaan.dev | Software Engineer</title>
-    <link rel="stylesheet" href="./muskaan.dev/css/main.css">
-    <link rel="stylesheet" href="./muskaan.dev/css/index.css">
-    <link rel="icon" type="image/png" href="./muskaan.dev/img/captain_snowball.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="icon" type="image/png" href="./img/captain-snowball.png">
 </head>
 <body>
 
     <header>
         <nav class="navbar">
             <div class="logo"><a href="./index.html">Muskaan.dev</a></div>
-            <ul class="nav-links">
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+                <span class="sr-only">Toggle navigation</span>
+                &#9776;
+            </button>
+            <ul class="nav-links" id="primary-nav">
                 <li><a href="./index.html" class="active">Home</a></li>
                 <li><a href="./about.html">About</a></li>
-                <li><a href="./project.html">Projects</a></li>
+                <li><a href="./work.html">Projects</a></li>
                 <li><a href="./contact.html">Contact</a></li>
             </ul>
         </nav>
@@ -29,46 +34,46 @@
                 <h1>Namaste Doston,
                     <br>
                     my name is Muskaan and I'm a ✨Software Engineer✨</h1>
-                <p class="subtitle">Driven by curiosity and a love for building things that work beautifully. 
-                    As a software engineering student, 
-                    I am constantly learning new technologies, while my current workplace allows me to deploy quick solutions in real-time environments. 
+                <p class="subtitle">Driven by curiosity and a love for building things that work beautifully.
+                    As a software engineering student,
+                    I am constantly learning new technologies, while my current workplace allows me to deploy quick solutions in real-time environments.
                     Explore my page to see what I've been working on! Welcome to my space!</p>
             </div>
             <div class="hero-image">
-                <img src="./muskaan.dev/img/homepage-foto.jpg" alt="Muskaan Mahabier">
+                <img src="./img/homepage-foto.jpg" alt="Muskaan Mahabier">
             </div>
         </section>
 
-<section class="skills-section">
-    <div class="skills-header">
-        <h2>My Tech Stack</h2>
-        <p class="skills-subtitle">Languages I speak, except sarcasm.</p>
-    </div>
-
-    <div class="skills-grid">
-        <div class="skills-category-card">
-            <div class="category-icon"><i class="fa-solid fa-code"></i></div>
-            <h3>Languages & Backend</h3>
-            <div class="skills-badges">
-                <span class="skill-badge"><i class="fa-solid fa-database text-sql"></i> SQL</span>
-                <span class="skill-badge"><i class="fa-brands fa-php text-php"></i> PHP</span>
-                <span class="skill-badge"><i class="fa-brands fa-java text-java"></i> Java</span>
-                <span class="skill-badge"><i class="fa-brands fa-python text-python"></i> Python</span>
+        <section class="skills-section">
+            <div class="skills-header">
+                <h2>My Tech Stack</h2>
+                <p class="skills-subtitle">Languages I speak, except sarcasm.</p>
             </div>
-        </div>
 
-        <div class="skills-category-card">
-            <div class="category-icon"><i class="fa-solid fa-laptop-code"></i></div>
-            <h3>Frontend & UI</h3>
-            <div class="skills-badges">
-                <span class="skill-badge"><i class="fa-brands fa-html5 text-html"></i> HTML & CSS</span>
-                <span class="skill-badge"><i class="fa-brands fa-js text-js"></i> JavaScript</span>
-                <span class="skill-badge"><i class="fa-brands fa-react text-react"></i> ReactJS</span>
-                <span class="skill-badge"><i class="fa-simple-icons fa-nextdotjs text-next"></i> NextJS</span>
+            <div class="skills-grid">
+                <div class="skills-category-card">
+                    <div class="category-icon"><i class="fa-solid fa-code"></i></div>
+                    <h3>Languages & Backend</h3>
+                    <div class="skills-badges">
+                        <span class="skill-badge"><i class="fa-solid fa-database text-sql"></i> SQL</span>
+                        <span class="skill-badge"><i class="fa-brands fa-php text-php"></i> PHP</span>
+                        <span class="skill-badge"><i class="fa-brands fa-java text-java"></i> Java</span>
+                        <span class="skill-badge"><i class="fa-brands fa-python text-python"></i> Python</span>
+                    </div>
+                </div>
+
+                <div class="skills-category-card">
+                    <div class="category-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                    <h3>Frontend & UI</h3>
+                    <div class="skills-badges">
+                        <span class="skill-badge"><i class="fa-brands fa-html5 text-html"></i> HTML & CSS</span>
+                        <span class="skill-badge"><i class="fa-brands fa-js text-js"></i> JavaScript</span>
+                        <span class="skill-badge"><i class="fa-brands fa-react text-react"></i> ReactJS</span>
+                        <span class="skill-badge"><i class="fa-brands fa-react text-next"></i> NextJS</span>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-</section>
+        </section>
 
         <section class="featured-projects">
             <h2>Featured Projects</h2>
@@ -76,16 +81,16 @@
                 <div class="featured-card">
                     <h3>📚 Books Search App</h3>
                     <p>A Next.js app to search for books using the Open Library API. Built with Ant Design, Redux, and Axios.</p>
-                    <a href="./project.html" class="btn-secondary">View Details &rarr;</a>
+                    <a href="./work.html" class="btn-secondary">View Details &rarr;</a>
                 </div>
                 <div class="featured-card">
                     <h3>🎮 CodeClash</h3>
                     <p>CodeClash Terminal Game. Mortal Kombat's cheap edition. A turn-based fighting game build on strategy.</p>
-                    <a href="./project.html" class="btn-secondary">View Details &rarr;</a>
+                    <a href="./work.html" class="btn-secondary">View Details &rarr;</a>
                 </div>
             </div>
             <div class="view-more-container">
-                <a href="./project.html" class="btn-primary">View More Projects &rarr;</a>
+                <a href="./work.html" class="btn-primary">View More Projects &rarr;</a>
             </div>
         </section>
     </main>
@@ -93,5 +98,7 @@
     <footer>
         <p>&copy; 2026 Muskaan Mahabier. Built with love, cake and chaos</p>
     </footer>
+
+    <script src="./js/main.js"></script>
 </body>
 </html>

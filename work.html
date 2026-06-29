@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Muskaan.dev</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/work.css">
+    <link rel="icon" type="image/png" href="./img/captain-snowball.png">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo"><a href="./index.html">Muskaan.dev</a></div>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+                <span class="sr-only">Toggle navigation</span>
+                &#9776;
+            </button>
+            <ul class="nav-links" id="primary-nav">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./work.html" class="active">Projects</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="work-header">
+            <h2>My Projects & Lab</h2>
+            <p>A showcase of web applications I have engineered, ranging from personal development experiments to secure enterprise-level applications.</p>
+        </div>
+
+        <div class="project-filters">
+            <button class="filter-btn active" data-filter="all" type="button">✨ All</button>
+            <button class="filter-btn" data-filter="personal" type="button">💻 Personal</button>
+            <button class="filter-btn" data-filter="enterprise" type="button">🏢 Enterprise</button>
+        </div>
+        <p id="projectCount" class="project-count"></p>
+
+        <div class="projects-grid">
+            <div class="project-card"
+                 data-category="personal"
+                 data-title="📚 Books Search App"
+                 data-description="A dynamic Next.js application powered by the Open Library API that lets users effortlessly search, filter, and dive deep into detailed book analytics."
+                 data-tags="Next.js, Ant Design, Redux"
+                 data-link="https://scb-book-search-app.vercel.app/">
+                <span class="card-badge">Personal</span>
+                <div class="project-image-container">
+                    <img src="./img/book-search-app.png" alt="Book Search Preview">
+                </div>
+                <div class="project-info">
+                    <h3>📚 Books Search App</h3>
+                    <p>A dynamic Next.js application powered by the Open Library API that lets users effortlessly search, filter, and dive deep into detailed book analytics. 🚀📈</p>
+                    <div class="tech-tags">
+                        <span>Next.js</span>
+                        <span>Ant Design</span>
+                        <span>Redux</span>
+                    </div>
+                    <a href="https://scb-book-search-app.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-link">Open App &rarr;</a>
+                    <button class="expand-btn" type="button">Quick peek 👀</button>
+                </div>
+            </div>
+
+            <div class="project-card"
+                 data-category="personal"
+                 data-title="🎮 CodeClash Terminal Game"
+                 data-description="Mortal Kombat: Cheap Edition — a dynamic, turn-based fighting game where strategic choices, managing your Health Points (HP), and mastering interactive mechanics are the keys to absolute victory!"
+                 data-tags="Java, OOP"
+                 data-link="https://github.com/MuskaanM4/CodeClash.git">
+                <span class="card-badge">Personal</span>
+                <div class="project-image-container">
+                    <img src="./img/codeclash.png" alt="CodeClash Preview">
+                </div>
+                <div class="project-info">
+                    <h3>🎮 CodeClash Terminal Game</h3>
+                    <p>🥷 Mortal Kombat: Cheap Edition 😉 A dynamic, turn-based fighting game where strategic choices, managing your Health Points (HP) 💔, and mastering interactive mechanics are the keys to absolute victory! 🏆</p>
+                    <div class="tech-tags">
+                        <span>Java</span>
+                        <span>OOP</span>
+                    </div>
+                    <a href="https://github.com/MuskaanM4/CodeClash.git" target="_blank" rel="noopener noreferrer" class="project-link">Visit App &rarr;</a>
+                    <button class="expand-btn" type="button">Quick peek 👀</button>
+                </div>
+            </div>
+
+            <div class="project-card"
+                 data-category="personal"
+                 data-title="🕹️ Game Store Tracker"
+                 data-description="Level up your game administration! This application gives you complete control over your video game collection. Manage your favorite titles, track prices, and keep everything beautifully organized by platform."
+                 data-tags="JavaScript, Next.js, CSS"
+                 data-link="#">
+                <span class="card-badge">Personal</span>
+                <div class="project-image-container">
+                    <img src="./img/game-store.png" alt="Game Store Preview">
+                </div>
+                <div class="project-info">
+                    <h3>🕹️ Game Store Tracker</h3>
+                    <p>✨ Level up your game administration! 🚀 This application gives you complete control over your video game collection. Manage your favorite titles 🎬, track prices 💸, and keep everything beautifully organized by platform👾.</p>
+                    <div class="tech-tags">
+                        <span>JavaScript</span>
+                        <span>Next.js</span>
+                        <span>CSS</span>
+                    </div>
+                    <a href="#" class="project-link">Visit App &rarr;</a>
+                    <button class="expand-btn" type="button">Quick peek 👀</button>
+                </div>
+            </div>
+
+            <div class="project-card"
+                 data-category="personal"
+                 data-title="🍕 Good Food Good Mood"
+                 data-description="Taste the authentic flavors of Italy in Paramaribo! From fresh, handmade pasta to crispy wood-fired pizza, every dish is made with pure passion."
+                 data-tags="JavaScript, HTML, CSS"
+                 data-link="https://github.com/MuskaanM4/Good-Food-Good-Mood.git">
+                <span class="card-badge">Personal</span>
+                <div class="project-image-container">
+                    <img src="./img/good-food.png" alt="Good Food Good Mood Preview">
+                </div>
+                <div class="project-info">
+                    <h3>🍕 Good Food Good Mood</h3>
+                    <p>🇮🇹 Taste the authentic flavors of Italy in Paramaribo! ✨
+                    From fresh, handmade pasta 🍝 to crispy wood-fired pizza 🍕, every dish is made with pure passion. ❤️</p>
+                    <div class="tech-tags">
+                        <span>JavaScript</span>
+                        <span>HTML</span>
+                        <span>CSS</span>
+                    </div>
+                    <a href="https://github.com/MuskaanM4/Good-Food-Good-Mood.git" target="_blank" rel="noopener noreferrer" class="project-link">Visit App &rarr;</a>
+                    <button class="expand-btn" type="button">Quick peek 👀</button>
+                </div>
+            </div>
+
+            <div class="project-card internal"
+                 data-category="enterprise"
+                 data-title="🏢 Renewal System"
+                 data-description="Renewal Notices Dashboard — a dedicated management dashboard for tracking policy renewals and streamlining notification delivery within Suriname."
+                 data-tags="PowerShell, JavaScript, Python, HTML, CSS, Jupyter Notebook"
+                 data-link="#">
+                <span class="card-badge">Enterprise</span>
+                <div class="project-image-container">
+                    <img src="./img/renewal.png" alt="Renewal Dashboard Preview">
+                </div>
+                <div class="project-info">
+                    <h3>🏢 Renewal System</h3>
+                    <p>📅 Renewal Notices Dashboard A dedicated management dashboard for tracking policy renewals and streamlining notification delivery within Suriname. 🇸🇷🚀</p>
+                    <div class="tech-tags">
+                        <span>PowerShell</span>
+                        <span>JavaScript</span>
+                        <span>Python</span>
+                        <span>HTML | CSS</span>
+                        <span>Jupyter Notebook</span>
+                    </div>
+                    <span class="internal-tag">🔒 Internal Enterprise App</span>
+                    <button class="expand-btn" type="button">Quick peek 👀</button>
+                </div>
+            </div>
+
+            <div class="project-card internal"
+                 data-category="enterprise"
+                 data-title="🚗 Suriname Motor Claims"
+                 data-description="A real-time tablet platform enabling on-site claims adjusters to seamlessly submit accident data, digital sketches, and signatures instantly."
+                 data-tags="APIs, Real-time, HTML, CSS, Python"
+                 data-link="#">
+                <span class="card-badge">Enterprise</span>
+                <div class="project-image-container">
+                    <img src="./img/claims.png" alt="Motor Claims Preview">
+                </div>
+                <div class="project-info">
+                    <h3>🚗 Suriname Motor Claims</h3>
+                    <p>A real-time tablet platform enabling on-site claims adjusters to seamlessly submit accident data, digital sketches, and signatures instantly. 🚗⚡✍️</p>
+                    <div class="tech-tags">
+                        <span>APIs</span>
+                        <span>Real-time</span>
+                        <span>HTML | CSS</span>
+                        <span>Python</span>
+                    </div>
+                    <span class="internal-tag">🔒 Internal Enterprise App</span>
+                    <button class="expand-btn" type="button">Quick peek 👀</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="projectModal" class="project-modal-overlay">
+        <div class="project-modal">
+            <button class="modal-close" type="button" aria-label="Close">&times;</button>
+            <h3 class="modal-title"></h3>
+            <p class="modal-desc"></p>
+            <div class="modal-tech-tags tech-tags"></div>
+            <a href="#" target="_blank" rel="noopener noreferrer" class="project-link modal-link">Open Project &rarr;</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Muskaan Mahabier. Built with love, cake and chaos</p>
+    </footer>
+
+    <script src="./js/main.js"></script>
+    <script src="./js/work.js"></script>
+</body>
+</html>

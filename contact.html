@@ -4,19 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact | Muskaan.dev</title>
-    <link rel="stylesheet" href="./muskaan.dev/css/main.css">
-    <link rel="stylesheet" href="./muskaan.dev/css/contact.css">
-        <link rel="icon" type="image/png" href="./muskaan.dev/img/captain_snowball.png">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/contact.css">
+    <link rel="icon" type="image/png" href="./img/captain-snowball.png">
 </head>
 <body>
 
     <header>
         <nav class="navbar">
             <div class="logo"><a href="./index.html">Muskaan.dev</a></div>
-            <ul class="nav-links">
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+                <span class="sr-only">Toggle navigation</span>
+                &#9776;
+            </button>
+            <ul class="nav-links" id="primary-nav">
                 <li><a href="./index.html">Home</a></li>
                 <li><a href="./about.html">About</a></li>
-                <li><a href="./project.html">Projects</a></li>
+                <li><a href="./work.html">Projects</a></li>
                 <li><a href="./contact.html" class="active">Contact</a></li>
             </ul>
         </nav>
@@ -26,12 +30,12 @@
         <section class="contact-intro">
             <h2>Let's Connect!</h2>
             <p>Want to collaborate or just have a chat? Feel free to send a message!</p>
-            
+
             <ul class="social-links">
-                <li><strong>LinkedIn:</strong> <a href="#" target="_blank">LinkedIn Connect</a></li>
-                <li><strong>GitHub:</strong> <a href="#" target="_blank">GitHub Profile</a></li>
-                <li><strong>Facebook:</strong> <a href="#" target="_blank">Facebook Connect</a></li>
-                <li><strong>Instagram:</strong> <a href="#" target="_blank">Instagram Feed</a></li>
+                <li><strong>LinkedIn:</strong> <a href="#" target="_blank" rel="noopener noreferrer">LinkedIn Connect</a></li>
+                <li><strong>GitHub:</strong> <a href="#" target="_blank" rel="noopener noreferrer">GitHub Profile</a></li>
+                <li><strong>Facebook:</strong> <a href="#" target="_blank" rel="noopener noreferrer">Facebook Connect</a></li>
+                <li><strong>Instagram:</strong> <a href="#" target="_blank" rel="noopener noreferrer">Instagram Feed</a></li>
             </ul>
         </section>
 
@@ -53,8 +57,14 @@
                     <label for="notes">Notes / Message</label>
                     <textarea id="notes" rows="4" placeholder="Additional notes..."></textarea>
                 </div>
-                <button type="submit" class="btn-primary">Send Message</button>
+                <button type="submit" class="btn-primary">Send Message 💌</button>
             </form>
+
+            <div id="formSuccess" class="form-success">
+                <span class="success-emoji">💕</span>
+                <h3>Message sent!</h3>
+                <p>Thanks for reaching out, <span class="success-name"></span>! I'll get back to you at <span class="success-contact"></span> soon.</p>
+            </div>
         </section>
     </main>
 

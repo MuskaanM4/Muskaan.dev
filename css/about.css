@@ -1,0 +1,373 @@
+.about-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+}
+
+/* Hero intro card */
+.intro-profile {
+    background: var(--card-bg);
+    border: 2px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 2.5rem;
+    box-shadow: var(--shadow-soft);
+    position: relative;
+    overflow: hidden;
+}
+
+.intro-profile::before {
+    content: '🌸';
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 2.5rem;
+    opacity: 0.6;
+    animation: float 4s ease-in-out infinite;
+}
+
+.intro-profile h2 {
+    font-size: 2.2rem;
+    color: var(--accent-color);
+    margin-bottom: 0.5rem;
+}
+
+.intro-profile .typing-text {
+    font-size: 1.15rem;
+    color: var(--text-main);
+    font-weight: 600;
+    min-height: 1.5em;
+    margin-bottom: 1.5rem;
+    border-right: 2px solid var(--accent-color);
+    display: inline-block;
+    padding-right: 4px;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+.intro-profile p {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+}
+
+/* Fun stats row */
+.fun-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1rem;
+    margin: 2rem 0 0;
+}
+
+.stat-card {
+    background: linear-gradient(135deg, var(--accent-soft), var(--lavender));
+    border-radius: var(--radius-md);
+    padding: 1.2rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.stat-card:hover {
+    transform: scale(1.05) rotate(-2deg);
+    border-color: var(--accent-color);
+    box-shadow: var(--shadow-soft);
+}
+
+.stat-card .stat-number {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--accent-color);
+    display: block;
+}
+
+.stat-card .stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-weight: 600;
+}
+
+/* Vibe tags */
+.vibe-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-top: 1.5rem;
+}
+
+.vibe-tag {
+    background: var(--card-bg);
+    border: 2px dashed var(--border-color);
+    padding: 0.4rem 1rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-main);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    user-select: none;
+}
+
+.vibe-tag:hover,
+.vibe-tag.active {
+    background: var(--accent-color);
+    color: #fff;
+    border-style: solid;
+    transform: scale(1.08);
+}
+
+/* Timelines */
+.timelines-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.timelines-grid > section {
+    background: var(--card-bg);
+    border: 2px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    box-shadow: var(--shadow-soft);
+}
+
+.timelines-grid h3 {
+    color: var(--accent-color);
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.timeline {
+    border-left: 3px dashed var(--accent-color);
+    padding-left: 1.5rem;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.timeline-item {
+    position: relative;
+    padding: 1rem;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: transparent;
+}
+
+.timeline-item:hover {
+    background: var(--accent-soft);
+    transform: translateX(6px);
+}
+
+.timeline-item.expanded {
+    background: var(--accent-soft);
+    border-left: 3px solid var(--accent-color);
+    margin-left: -3px;
+}
+
+.timeline-item::before {
+    content: '💗';
+    position: absolute;
+    left: calc(-1.5rem - 14px);
+    top: 1rem;
+    font-size: 0.9rem;
+    transition: transform 0.3s ease;
+}
+
+.timeline-item:hover::before,
+.timeline-item.expanded::before {
+    transform: scale(1.3);
+}
+
+.timeline-item .year {
+    font-size: 0.85rem;
+    color: var(--accent-color);
+    font-weight: 800;
+    font-family: monospace;
+    background: var(--lavender);
+    display: inline-block;
+    padding: 0.15rem 0.6rem;
+    border-radius: 50px;
+}
+
+.timeline-item h4 {
+    font-size: 1.05rem;
+    margin: 0.4rem 0 0.2rem;
+    color: var(--text-main);
+}
+
+.timeline-item p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+}
+
+.timeline-item .timeline-detail {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, margin 0.3s ease;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    font-style: italic;
+}
+
+.timeline-item.expanded .timeline-detail {
+    max-height: 80px;
+    margin-top: 0.5rem;
+}
+
+.timeline-link {
+    color: var(--accent-color);
+    text-decoration: none;
+    margin-left: 0.3rem;
+    transition: transform 0.2s ease;
+}
+
+.timeline-link:hover {
+    transform: scale(1.2);
+}
+
+/* Interests */
+.interests-section h3 {
+    color: var(--accent-color);
+    font-size: 1.6rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.interests-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.interest-card {
+    background-color: var(--card-bg);
+    padding: 1.8rem;
+    border-radius: var(--radius-lg);
+    border: 2px solid var(--border-color);
+    box-shadow: var(--shadow-soft);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.interest-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(244, 114, 182, 0.08) 0%, transparent 60%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.interest-card:hover {
+    transform: translateY(-8px) rotate(1deg);
+    border-color: var(--accent-color);
+    box-shadow: var(--shadow-hover);
+}
+
+.interest-card:hover::before {
+    opacity: 1;
+}
+
+.interest-card.flipped {
+    background: linear-gradient(135deg, var(--accent-soft), var(--lavender));
+}
+
+.interest-card h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.6rem;
+    color: var(--text-main);
+}
+
+.interest-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.interest-card .card-sparkle {
+    position: absolute;
+    top: 0.8rem;
+    right: 1rem;
+    font-size: 1.2rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.interest-card:hover .card-sparkle {
+    opacity: 1;
+    animation: float 2s ease-in-out infinite;
+}
+
+.spirit-animal {
+    border-left: 4px solid var(--accent-color);
+    background: linear-gradient(135deg, #fff, var(--accent-soft));
+}
+
+.vibe-display {
+    margin-top: 1rem;
+    color: var(--accent-color);
+    font-size: 1rem;
+}
+
+.vibe-display.vibe-bounce {
+    animation: fadeInUp 0.4s ease;
+}
+
+.section-hint {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
+}
+
+.interests-hint {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.stat-card.stat-bump {
+    transform: scale(1.15) rotate(3deg);
+}
+
+@media (max-width: 768px) {
+    .intro-profile {
+        padding: 1.5rem;
+    }
+
+    .fun-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .timelines-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .timelines-grid > section {
+        padding: 1.5rem;
+    }
+
+    .interests-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .fun-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .vibe-tags {
+        justify-content: center;
+    }
+}

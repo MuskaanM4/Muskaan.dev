@@ -5,19 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me | Muskaan.dev</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="./muskaan.dev/css/main.css">
-    <link rel="stylesheet" href="./muskaan.dev/css/about.css">
-        <link rel="icon" type="image/png" href="./muskaan.dev/img/captain_snowball.png">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/about.css">
+    <link rel="icon" type="image/png" href="./img/captain-snowball.png">
 </head>
 <body>
 
     <header>
         <nav class="navbar">
             <div class="logo"><a href="./index.html">Muskaan.dev</a></div>
-            <ul class="nav-links">
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+                <span class="sr-only">Toggle navigation</span>
+                &#9776;
+            </button>
+            <ul class="nav-links" id="primary-nav">
                 <li><a href="./index.html">Home</a></li>
                 <li><a href="./about.html" class="active">About</a></li>
-                <li><a href="./project.html">Projects</a></li>
+                <li><a href="./work.html">Projects</a></li>
                 <li><a href="./contact.html">Contact</a></li>
             </ul>
         </nav>
@@ -26,89 +30,129 @@
     <main class="about-layout">
         <section class="intro-profile">
             <h2>About Me</h2>
-            <br>
-            <p>I’m Muskaan, and I write code for a living, for school, and occasionally in my sleep when a bug decides to haunt my dreams. 
+            <p id="typingText" class="typing-text"></p>
+
+            <p>I'm Muskaan, and I write code for a living, for school, and occasionally in my sleep when a bug decides to haunt my dreams.
                 Currently, I am splitting my sanity between studying at UNASAT and working as an actual Software Engineer at Assuria N.V.</p>
 
-                <p>Meaning I'm equally comfortable panicking over an error at 2 AM.</p>
+            <p>Meaning I'm equally comfortable panicking over an error at 2 AM.</p>
 
-
-            <p>In 2023, purely for the plot (and a bit of fun), 
-                I founded <strong>'Get IT Done'</strong> - a mini-startup that is somehow still alive and kicking. 
+            <p>In 2023, purely for the plot (and a bit of fun),
+                I founded <strong>'Get IT Done'</strong> - a mini-startup that is somehow still alive and kicking.
                 We specialize in building responsive websites and clean flyer designs.</p>
 
-               <p>From working on deep functional applications to fighting the laws of physics to center pizza icons on an Italian food website, 
-                I love the absolute rush of solving problems. I approach engineering with a firm belief that 
-                90% of computer science is just typing your password blindly into a terminal while pretending you know exactly what’s about to happen.</p>
+            <p>From working on deep functional applications to fighting the laws of physics to center pizza icons on an Italian food website,
+                I love the absolute rush of solving problems. I approach engineering with a firm belief that
+                90% of computer science is just typing your password blindly into a terminal while pretending you know exactly what's about to happen.</p>
 
+            <div class="fun-stats">
+                <div class="stat-card">
+                    <span class="stat-number" data-target="4" data-suffix="">0</span>
+                    <span class="stat-label">🐾 Dogs</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number" data-target="3" data-suffix="+">0</span>
+                    <span class="stat-label">💼 Jobs</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number" data-target="90" data-suffix="%">0</span>
+                    <span class="stat-label">🤷 Guesswork</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number" data-target="2" data-suffix=" AM">0</span>
+                    <span class="stat-label">😱 Panic Hour</span>
+                </div>
+            </div>
+
+            <div class="vibe-tags">
+                <span class="vibe-tag active" data-emoji="✨" data-msg="Curious &amp; creative!">✨ Creative</span>
+                <span class="vibe-tag" data-emoji="🌸" data-msg="Soft girl energy, hard code skills.">🌸 Girly</span>
+                <span class="vibe-tag" data-emoji="🐛" data-msg="Professional bug whisperer.">🐛 Debugger</span>
+                <span class="vibe-tag" data-emoji="🏔️" data-msg="Adventure is my love language.">🏔️ Adventurer</span>
+                <span class="vibe-tag" data-emoji="☕" data-msg="Fueled by cake and chaos.">☕ Chaotic</span>
+            </div>
+            <p id="vibeDisplay" class="vibe-display">✨ <strong>Curious &amp; creative!</strong></p>
         </section>
 
         <div class="timelines-grid">
-   <section>
-    <h3>Career History</h3>
-    <div class="timeline">
-        <div class="timeline-item">
-            <span class="year">2025 - NOW</span>
-            <h4>Applications Management / Software Engineer</h4>
-            <p>Assuria N.V. — 
-                <a href="https://www.assuria.sr" 
-                target="_blank" 
-                title="Visit Assuria website" 
-                class="timeline-link">
-                    <i class="fas fa-external-link-alt"></i>
-                </a>
-            </p>
-        </div>
-        <div class="timeline-item">
-            <span class="year">2024</span>
-            <h4>Front End Developer</h4>
-            <p>Ride Eats | Apura Innovations — 
-                <a href="https://ride-eats.com/" 
-                target="_blank" 
-                title="Visit Ride Eats website" 
-                class="timeline-link">
-                    <i class="fas fa-external-link-alt"></i>
-                </a>
-            </p>
-        </div>
-        <div class="timeline-item">
-            <span class="year">2023 - NOW</span>
-            <h4>Web Design | Developer</h4>
-            <p>Startup Get IT Done — 
-                <a href="https://www.facebook.com/share/1H38oZgKyJ/?mibextid=wwXIfr" 
-                target="_blank" 
-                title="Visit Get IT Done Facebook" class="timeline-link">
-                    <i class="fas fa-external-link-alt"></i>
-                </a>
-            </p>
-        </div>
-        <div class="timeline-item">
-            <span class="year">2022</span>
-            <h4>IT Support</h4>
-            <p>Subisco International N.V. — 
-                <a href="https://subisco.com" 
-                target="_blank" 
-                title="Visit Subisco website" 
-                class="timeline-link">
-                    <i class="fas fa-external-link-alt"></i>
-                </a>
-            </p>
-        </div>
-    </div>
-</section>
+            <section>
+                <h3>💼 Career History</h3>
+                <p class="section-hint">Click a role to peek behind the scenes 👀</p>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <span class="year">2025 - NOW</span>
+                        <h4>Applications Management / Software Engineer</h4>
+                        <p>Assuria N.V. —
+                            <a href="https://www.assuria.sr"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            title="Visit Assuria website"
+                            class="timeline-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </p>
+                        <div class="timeline-detail">Building enterprise apps &amp; keeping the digital world spinning at Assuria. 🇸🇷</div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="year">2024</span>
+                        <h4>Front End Developer</h4>
+                        <p>Ride Eats | Apura Innovations —
+                            <a href="https://ride-eats.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            title="Visit Ride Eats website"
+                            class="timeline-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </p>
+                        <div class="timeline-detail">Crafted sleek UI for a food delivery platform. Hungry code, happy users. 🍔</div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="year">2023 - NOW</span>
+                        <h4>Web Design | Developer</h4>
+                        <p>Startup Get IT Done —
+                            <a href="https://www.facebook.com/share/1H38oZgKyJ/?mibextid=wwXIfr"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            title="Visit Get IT Done Facebook"
+                            class="timeline-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </p>
+                        <div class="timeline-detail">My baby startup! Websites, flyers, and pure hustle. 💪</div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="year">2022</span>
+                        <h4>IT Support</h4>
+                        <p>Subisco International N.V. —
+                            <a href="https://subisco.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            title="Visit Subisco website"
+                            class="timeline-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </p>
+                        <div class="timeline-detail">Where it all started — fixing things and learning the ropes. 🔧</div>
+                    </div>
+                </div>
+            </section>
 
             <section>
-                <h3>Education</h3>
+                <h3>🎓 Education</h3>
+                <p class="section-hint">Still learning, always growing 📚</p>
                 <div class="timeline">
                     <div class="timeline-item">
                         <span class="year">2024 - NOW</span>
                         <h4>Software Engineer</h4>
                         <p>UNASAT</p>
+                        <div class="timeline-detail">Leveling up my engineering skills one semester at a time. 🚀</div>
                     </div>
                     <div class="timeline-item">
                         <span class="year">2020 - 2024</span>
                         <h4>Application Developer</h4>
                         <p>NATIN MBO</p>
+                        <div class="timeline-detail">Where I fell in love with building apps from scratch. 💻</div>
                     </div>
                 </div>
             </section>
@@ -116,24 +160,29 @@
 
         <section class="interests-section">
             <h3>Interests & Personality</h3>
+            <p class="interests-hint">Tap a card for a little sparkle ✨</p>
             <div class="interests-grid">
                 <div class="interest-card">
+                    <span class="card-sparkle">✨</span>
                     <h4>🌲 Jungle & Adventure</h4>
                     <p>I am a massive fan of anything adventure! I love anything jungle. From 'bauxiet' rides, climbing mountains and discovering amazing rapids sulas.</p>
                 </div>
                 <div class="interest-card">
+                    <span class="card-sparkle">✨</span>
                     <h4>🐾 Dog Mom</h4>
-                    <p>I am a huge dog lover! I have 4 dogs of my own. </p>
+                    <p>I am a huge dog lover! I have 4 dogs of my own.</p>
                 </div>
                 <div class="interest-card spirit-animal">
+                    <span class="card-sparkle">✨</span>
                     <h4>🐰 Spirit Animal: Snowball</h4>
                     <p>Snowball balances an insanely cute, fluffy exterior with a fierce, larger-than-life, and slightly unhinged personality that makes him both a hilarious antagonist and a fiercely loyal friend!</p>
                 </div>
-                    <div class="interest-card spirit-animal">
+                <div class="interest-card spirit-animal">
+                    <span class="card-sparkle">✨</span>
                     <h4>🧠 Fun Fact</h4>
-                    <p>Managing 4 energetic dogs is actually the ultimate training ground for software engineering. 
-                        If you can handle a real-life pack merge conflict at feeding time, 
-                        or handling chaotic bugs, it is damn easy</p>
+                    <p>Managing 4 energetic dogs is actually the ultimate training ground for software engineering.
+                        If you can handle a real-life pack merge conflict at feeding time,
+                        or handling chaotic bugs, it is damn near the same thing.</p>
                 </div>
             </div>
         </section>
