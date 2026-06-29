@@ -3,7 +3,25 @@ document.addEventListener('DOMContentLoaded', () => {
     initScrollReveal();
     initNavHighlight();
     initMobileNav();
+    initHomeSnowballEasterEgg();
 });
+
+function initHomeSnowballEasterEgg() {
+    const photo = document.getElementById('heroPhoto');
+    if (!photo) return;
+
+    photo.addEventListener('click', () => {
+        const snowball = document.createElement('img');
+        snowball.src = './img/captain-snowball.png';
+        snowball.alt = 'Snowball flying by';
+        snowball.className = 'snowball-flyby';
+        snowball.style.left = '0px';
+        snowball.style.top = `${Math.random() * 60 + 20}%`;
+        document.body.appendChild(snowball);
+
+        setTimeout(() => snowball.remove(), 3000);
+    });
+}
 
 function addFloatingBlobs() {
     if (document.querySelector('.floating-blob')) return;

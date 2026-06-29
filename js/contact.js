@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
+    initContactEasterEgg();
+
     const form = document.getElementById('portfolioContactForm');
     const successMsg = document.getElementById('formSuccess');
     const statusEl = document.getElementById('formStatus');
@@ -90,6 +92,48 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+function initContactEasterEgg() {
+    const trigger = document.getElementById('snowballSecretTrigger');
+    if (!trigger) return;
+
+    const overlay = document.createElement('div');
+    overlay.className = 'secret-overlay';
+    overlay.innerHTML = `
+        <div class="secret-card">
+            <h3>Snowball's Secret Page</h3>
+            <p>You found Snowball's hidden door. You made it to the cutest little secret.</p>
+            <p>
+                <a href="https://youtube.com/shorts/NOXu-rvr0s0?si=8uRcc1IUVX4k_xDD" target="_blank" rel="noopener noreferrer">
+                    Click for the surprise 🐰
+                </a>
+            </p>
+            <button type="button">Close</button>
+        </div>
+    `;
+    document.body.appendChild(overlay);
+
+    const closeBtn = overlay.querySelector('button');
+
+    const openSecret = () => {
+        overlay.classList.add('show');
+        document.body.style.overflow = 'hidden';
+    };
+
+    const closeSecret = () => {
+        overlay.classList.remove('show');
+        document.body.style.overflow = '';
+    };
+
+    trigger.addEventListener('click', openSecret);
+    closeBtn.addEventListener('click', closeSecret);
+    overlay.addEventListener('click', (event) => {
+        if (event.target === overlay) closeSecret();
+    });
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') closeSecret();
+    });
+}
+
 function validateField(input) {
     const value = input.value.trim();
     let valid = value.length > 0;
@@ -111,3 +155,5 @@ function setStatus(message, isError = false) {
     statusEl.textContent = message;
     statusEl.className = `form-status${isError ? ' error' : ''}`;
 }
+
+

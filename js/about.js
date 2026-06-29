@@ -132,6 +132,23 @@ function initTimelineToggle() {
 }
 
 function initInterestCards() {
+    const dogMomCard = document.getElementById('dogMomCard');
+
+    if (dogMomCard) {
+        dogMomCard.addEventListener('click', () => {
+            const pawSymbols = ['🐾', '🦮', '🐶', '🐕', '🦴', '🐩', '🐕‍🦺'];
+            for (let i = 0; i < 18; i++) {
+                const paw = document.createElement('div');
+                paw.className = 'paw-print';
+                paw.textContent = pawSymbols[i % pawSymbols.length];
+                paw.style.left = `${Math.random() * 100}vw`;
+                paw.style.top = `${Math.random() * 100}vh`;
+                document.body.appendChild(paw);
+                setTimeout(() => paw.remove(), 1200);
+            }
+        });
+    }
+
     document.querySelectorAll('.interest-card').forEach((card) => {
         card.addEventListener('click', () => {
             card.classList.toggle('flipped');

@@ -22,7 +22,7 @@
     right: 1.5rem;
     font-size: 2.5rem;
     opacity: 0.6;
-    animation: float 4s ease-in-out infinite;
+    animation: float 5.5s ease-in-out infinite;
 }
 
 .intro-profile h2 {
@@ -282,6 +282,22 @@
     transform: translateY(-8px) rotate(1deg);
     border-color: var(--accent-color);
     box-shadow: var(--shadow-hover);
+}
+
+.paw-print {
+    position: fixed;
+    width: 42px;
+    height: 42px;
+    pointer-events: none;
+    z-index: 2500;
+    opacity: 0.85;
+    animation: paw-float 2.5s ease-out forwards;
+}
+
+@keyframes paw-float {
+    0% { transform: translateY(0) scale(0.7); opacity: 0; }
+    30% { transform: translateY(-10px) scale(1); opacity: 0.9; }
+    100% { transform: translateY(60px) scale(0.95); opacity: 0; }
 }
 
 .interest-card:hover::before {
