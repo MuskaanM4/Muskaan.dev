@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact | Muskaan.dev</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/contact.css">
     <link rel="icon" type="image/png" href="./img/captain-snowball.png">
@@ -28,36 +29,56 @@
 
     <main class="contact-layout">
         <section class="contact-intro">
-            <h2>Let's Connect!</h2>
-            <p>Want to collaborate or just have a chat? Feel free to send a message!</p>
+            <div class="intro-badge">✨ Open for collaboration</div>
+            <h2>Let's connect!</h2>
+            <p>Whether you want to build something new, say hello, or swap ideas over coffee, this is the place.</p>
 
-            <ul class="social-links">
-                <li><strong>LinkedIn:</strong> <a href="#" target="_blank" rel="noopener noreferrer">LinkedIn Connect</a></li>
-                <li><strong>GitHub:</strong> <a href="#" target="_blank" rel="noopener noreferrer">GitHub Profile</a></li>
-                <li><strong>Facebook:</strong> <a href="#" target="_blank" rel="noopener noreferrer">Facebook Connect</a></li>
-                <li><strong>Instagram:</strong> <a href="#" target="_blank" rel="noopener noreferrer">Instagram Feed</a></li>
-            </ul>
+            <div class="social-links" aria-label="Social links">
+                <a class="social-icon" href="https://www.linkedin.com/in/muskaanmahabier/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a class="social-icon" href="https://github.com/MuskaanM4" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a class="social-icon" href="https://www.instagram.com/mahabier.m/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a class="social-icon" href="mailto:muskaanmahabier@gmail.com" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+
+            <div class="contact-image">
+                <img src="./img/contact_snowbal.png" alt="Muskaan Mahabier">
+            </div>
+
         </section>
 
         <section class="form-container">
             <form id="portfolioContactForm" class="contact-form">
                 <div class="form-group">
                     <label for="name">Name</label>
-                    <input type="text" id="name" required placeholder="Your name">
+                    <input type="text" id="name" name="name" required placeholder="Your name">
                 </div>
                 <div class="form-group">
                     <label for="contact-method">Phone Number / E-mail</label>
-                    <input type="text" id="contact-method" required placeholder="e.g., mail@example.com or +597...">
+                    <input type="text" id="contact-method" name="contact" required placeholder="e.g., mail@example.com or +597...">
                 </div>
                 <div class="form-group">
                     <label for="reason">Reason for contact</label>
-                    <input type="text" id="reason" placeholder="e.g., Web project, Questions">
+                    <input type="text" id="reason" name="reason" placeholder="e.g., Web project, Questions">
                 </div>
                 <div class="form-group">
                     <label for="notes">Notes / Message</label>
-                    <textarea id="notes" rows="4" placeholder="Additional notes..."></textarea>
+                    <textarea id="notes" name="message" rows="4" placeholder="Additional notes..."></textarea>
                 </div>
+                <input type="hidden" name="_subject" value="New portfolio message">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_replyto" value="">
+                <input type="hidden" name="_cc" value="">
                 <button type="submit" class="btn-primary">Send Message 💌</button>
+                <p id="formStatus" class="form-status" aria-live="polite"></p>
             </form>
 
             <div id="formSuccess" class="form-success">

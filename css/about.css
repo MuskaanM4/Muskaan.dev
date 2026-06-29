@@ -56,7 +56,7 @@
 /* Fun stats row */
 .fun-stats {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 1rem;
     margin: 2rem 0 0;
 }
@@ -64,30 +64,39 @@
 .stat-card {
     background: linear-gradient(135deg, var(--accent-soft), var(--lavender));
     border-radius: var(--radius-md);
-    padding: 1.2rem;
-    text-align: center;
+    padding: 1rem 1.1rem;
+    text-align: left;
     cursor: pointer;
     transition: all 0.3s ease;
     border: 2px solid transparent;
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.35rem;
 }
 
 .stat-card:hover {
-    transform: scale(1.05) rotate(-2deg);
+    transform: translateY(-4px) rotate(-1deg);
     border-color: var(--accent-color);
     box-shadow: var(--shadow-soft);
 }
 
-.stat-card .stat-number {
-    font-size: 2rem;
-    font-weight: 800;
-    color: var(--accent-color);
-    display: block;
+.stat-card .stat-icon {
+    font-size: 1.25rem;
+    margin-bottom: 0.15rem;
 }
 
-.stat-card .stat-label {
-    font-size: 0.85rem;
+.stat-card .stat-title {
+    font-size: 0.95rem;
+    font-weight: 800;
+    color: var(--accent-color);
+}
+
+.stat-card .stat-copy {
+    font-size: 0.82rem;
     color: var(--text-muted);
-    font-weight: 600;
+    line-height: 1.45;
 }
 
 /* Vibe tags */
